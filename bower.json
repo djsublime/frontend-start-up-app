@@ -1,0 +1,23 @@
+{
+  "name": "template startup",
+  "version": "0.0.0",
+  "authors": [
+    "Dragan Jovanovic <dragan.doe@gmail.com>"
+  ],
+  "description": "angularjs startup App for building frontend templates based on bootstrap framework",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "notes.txt",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angularjs": "~1.4.3",
+    "font-awsome": "~4.4.0"
+  }
+}

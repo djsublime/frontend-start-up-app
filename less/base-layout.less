@@ -1,0 +1,54 @@
+/*
+
+-- layout.less
+
+*/
+
+// TO DO less logic if fixed header footer to apply some padding to the main container and aslo fixed width or full
+
+.header-wrapper {
+    position: relative;
+    &.sticky{
+        z-index: 10000;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: orange;
+    }
+}
+
+.banner-wrapper {
+    position: relative;
+}
+
+.content-wrapper {
+    position: relative;
+}
+
+.info-wrapper {
+    position: relative;
+}
+
+.footer-wrapper {
+    position: relative;
+    &.sticky{
+        z-index: 10000;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        background: orange;
+    }
+}
+
+.section-block {
+    position: relative;
+    &.add-opacity {}
+}
+
+.img-fullwidth {
+    width: 100%;
+    display: block;
+    height: auto;
+}

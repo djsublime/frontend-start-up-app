@@ -45,20 +45,23 @@
                     "header": {
                         templateUrl: 'app/views/partials/header.tpl.html'
                     },
-                    /*"banner": {
+                    "banner": {
                         templateUrl: 'app/views/pages/home/banner.tpl.html'
-                    },*/
+                    },
                     "main": {
-                        templateUrl: 'app/views/pages/home/main.tpl.html'
+                        //templateUrl: 'app/views/pages/home/main.tpl.html'
                     },
                     "info": {
-                        templateUrl: 'app/views/pages/home/info.tpl.html'
+                        //templateUrl: 'app/views/pages/home/info.tpl.html'
                     },
                     "footer": {
                         templateUrl: 'app/views/partials/footer.tpl.html'
                     },
                     "modal": {
 
+                    },
+                    "tpl-menu": {
+                        templateUrl: 'app/views/partials/tpl-menu.tpl.html'
                     }
                 }
             })
@@ -68,6 +71,34 @@
                     pageTitle: 'About',
                     pageClass: 'about-selector',
                     pageContainer: 'container-fluid',
+                },
+                views: {
+                    "header": {
+                        templateUrl: 'app/views/partials/header.tpl.html'
+                    },
+                    "banner": {
+
+                    },
+                    "main": {
+                        templateUrl: 'app/views/dummy.tpl.html'
+                    },
+                    "info": {
+                        
+                    },
+                    "footer": {
+                        templateUrl: 'app/views/partials/footer.tpl.html'
+                    },
+                    "modal": {
+
+                    }
+                }
+            })
+            .state('contact', {
+                url: '/contact',
+                data: {
+                    pageTitle: 'Contact',
+                    pageClass: 'contact-selector',
+                    pageContainer: 'container',
                 },
                 views: {
                     "header": {
@@ -100,13 +131,22 @@
 
         var vm = this;
 
-        vm.games = {};
-        vm.games.all = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-        vm.games.mp = [1, 2, 3, 4];
-        vm.games.ng = [5, 6, 7, 8];
-        vm.games.jg = [9, 10, 11, 12];
-
         console.log('AppCtrl controller - started');
+
+        vm.funLogin = function(){
+
+            angular.element($('.player-unauth')).hide();
+            angular.element($('.player-auth')).show();
+            angular.element($('.player-username')).text('Signed in as ' + angular.element($('input[name="username"]')).val());
+
+        };
+
+        vm.funLogout = function(){
+
+            angular.element($('.player-unauth')).show();
+            angular.element($('.player-auth')).hide();
+
+        };
 
 
     }
